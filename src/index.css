@@ -1,0 +1,122 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  padding: 20px;
+  color: #333;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+/* Search Section */
+.search-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.search-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+.search-form input[type="text"] {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  font-size: 1rem;
+}
+.search-form button {
+  padding: 15px 10px;
+  background: #ff6347;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border: rgb(250, 207, 16) 1px solid;
+  border-radius: 10px;
+}
+.search-form button:hover {
+  background: #ff4d30;
+}
+/* State Messages */
+.state-message {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+.loading {
+  color: #888;
+}
+.error {
+  color: red;
+}
+/* Recipe Results Grid */
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+/* Recipe Card */
+.recipe-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.recipe-card:hover {
+  transform: translateY(-5px);
+}
+.recipe-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.card-content {
+  padding: 15px;
+}
+.card-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+.card-content p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+  .search-form input[type="text"],
+  .search-form button {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
